@@ -57,7 +57,7 @@ def header(pfx):
 </header>
 '''
 
-FOOTER = f'''<footer><div class="wrap"><span>{S["name"]} · {S["city"]} ({S["postal_code"][:2]})</span><span>Pièces uniques, coulées et signées à la main</span></div></footer>
+FOOTER = f'''<footer><div class="wrap"><span>{S["name"]} · Île-de-France</span><span>Pièces uniques, coulées et signées à la main</span></div></footer>
 '''
 
 def pied_label(t, short=False):
@@ -66,7 +66,7 @@ def pied_label(t, short=False):
 
 def pied_spec(t):
     typ = t.get("pied_type")
-    return f"Pied de bistrot {typ} repeint en {t['pied']}" if typ else f"Pied de bistrot repeint en {t['pied']}"
+    return f"Pied de bistrot {typ}, repeint en {t['pied']}" if typ else f"Pied de bistrot repeint en {t['pied']}"
 
 def lang(t):
     return ' lang="ja"' if t["id"] == "teburu" else ""
@@ -86,7 +86,7 @@ def price_txt(t):
     return f'{t["price"]} €' if t.get("price") else "Sur demande"
 
 def meta_desc(t):
-    return (f"Table en terrazzo {t['name']}, œuvre unique coulée main à {S['city']}. Plateau Ø {fr(DIM['diametre_cm'])} cm, "
+    return (f"Table en terrazzo {t['name']}, œuvre unique coulée main en Île-de-France. Plateau Ø {fr(DIM['diametre_cm'])} cm, "
             f"pied {t['pied']}, {DIM['hauteur_cm']} cm de haut. Gravée, signée et datée.")
 
 FAQ = [
@@ -103,7 +103,7 @@ FAQ = [
  ("Qu'est-ce que la Série 0 ?",
   "C'est la première série de tables, nommée L'Univers : les six premières œuvres, gravées et datées du 14 juillet 2025, qui marquent le début de ce travail."),
  ("Où est l'atelier ?",
-  f"À {S['city']} ({S['postal_code'][:2]}), en Île-de-France. Pas de visite sur place : on se joint par téléphone ou SMS, à toute heure, et le retrait ou la livraison se discutent à la commande."),
+  f"En Île-de-France. Pas de visite sur place : on se joint par téléphone ou SMS, à toute heure, et le retrait ou la livraison se discutent à la commande."),
  ("Quel est le prix d'une table ?",
   "Le prix est communiqué sur demande, par téléphone ou SMS, car chaque pièce est unique."),
 ]
@@ -119,17 +119,17 @@ def build_home():
     body = (body.replace("{{CARDS}}", "".join(card(t) for t in TABLES))
                 .replace("{{OPTIONS}}", options).replace("{{COUNT}}", str(len(TABLES))))
     phone_row = f'<div><dt>Téléphone</dt><dd><a class="num" href="tel:{S["phone_tel"]}">{S["phone_display"]}</a></dd></div>'
-    body = body.replace('<dd>Orly (94)</dd></div>', '<dd>Orly (94)</dd></div>\n          ' + phone_row)
+    body = body.replace('<dd>Île-de-France</dd></div>', '<dd>Île-de-France</dd></div>\n          ' + phone_row)
     biz = {"@context": "https://schema.org", "@type": "LocalBusiness", "name": S["name"],
            "description": "Œuvres en terrazzo coulées main : tables d'art fonctionnel, exemplaires uniques signés et datés, et créations sur mesure.",
            "url": BASE, "telephone": S["phone_tel"], "image": BASE + "img/groupe.jpg",
-           "address": {"@type": "PostalAddress", "addressLocality": S["city"], "postalCode": S["postal_code"], "addressCountry": "FR"},
+           "areaServed": {"@type": "AdministrativeArea", "name": "Île-de-France"},
            "areaServed": {"@type": "AdministrativeArea", "name": "Île-de-France"}}
     if S.get("same_as"): biz["sameAs"] = S["same_as"]
     faq_ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}
     h = head("Table terrazzo faite main, œuvre unique signée | Terrazzo François",
-             "Œuvres en terrazzo coulées main à Orly : des tables d'art fonctionnel, chacune en un seul exemplaire, gravée, signée et datée. Création sur mesure.",
+             "Œuvres en terrazzo coulées main en Île-de-France : des tables d'art fonctionnel, chacune en un seul exemplaire, gravée, signée et datée. Création sur mesure.",
              BASE, "", ld(biz) + "\n" + ld(faq_ld))
     html_out = h + body.strip() + '\n\n<script src="home.js"></script>\n</body>\n</html>\n'
     (ROOT / "index.html").write_text(html_out, encoding="utf-8")
@@ -186,7 +186,7 @@ def build_table(t):
           <a class="btn primary" href="tel:{S["phone_tel"]}">Appeler</a>
           <a class="btn" href="sms:{S["phone_tel"]}?&body={sms_body}">Envoyer un SMS</a>
         </div>
-        <p class="note">Ou au <span class="num">{S["phone_display"]}</span>. Atelier à {S["city"]} ({S["postal_code"][:2]}). Appels et SMS 24h/24.</p>
+        <p class="note">Ou au <span class="num">{S["phone_display"]}</span>. Atelier en Île-de-France. Appels et SMS 24h/24.</p>
       </div>
     </article>
   </div>
