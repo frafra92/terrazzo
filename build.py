@@ -98,6 +98,10 @@ FAQ = [
   "Oui. La couleur du plateau, les éclats de marbre, le pied, la gravure et la taille se choisissent avec vous. Appelez ou envoyez un SMS pour décrire votre projet."),
  ("Est-ce un investissement ?",
   "Chaque table est une œuvre signée, datée et en un seul exemplaire, ce qui la distingue d'un meuble de série. Je ne promets aucune plus-value : une œuvre s'achète d'abord pour la vivre chez soi."),
+ ("Y a-t-il un certificat d'authenticité ?",
+  "Oui. Chaque œuvre est remise avec sa facture, qui fait office de certificat d'authenticité."),
+ ("Qu'est-ce que la Série 0 ?",
+  "C'est la première série de tables, nommée L'Univers : les six premières œuvres, gravées et datées du 14 juillet 2025, qui marquent le début de ce travail."),
  ("Où est l'atelier ?",
   f"À {S['city']} ({S['postal_code']}), en Île-de-France, sur rendez-vous. Le retrait et la livraison se discutent à la commande."),
  ("Quel est le prix d'une table ?",
@@ -154,7 +158,7 @@ def build_table(t):
             ("Dimensions", f"Ø {fr(DIM['diametre_cm'])} cm · épaisseur {fr(DIM['epaisseur_cm'])} cm · hauteur totale {DIM['hauteur_cm']} cm"),
             ("Pied", pied_spec(t)), ("Fixation", "Vissé sur une cale en bois de parquet"),
             ("Gravure", "Nom" + (f" ({t['latin']})" if t.get("latin") else "") + ", signature et date au dos"),
-            ("Prix", price_txt(t)), ("Édition", "Exemplaire unique, première série"), ("Statut", "Disponible")]
+            ("Prix", price_txt(t)), ("Édition", "Exemplaire unique, Série 0 : L'Univers"), ("Certificat", "La facture fait office de certificat d'authenticité"), ("Statut", "Disponible")]
     spec_html = "".join(f"<div><dt>{a}</dt><dd>{esc(b)}</dd></div>" for a, b in spec)
     part = ""
     if t.get("particularites"):
@@ -172,10 +176,10 @@ def build_table(t):
         <div class="thumbs" id="thumbs">{thumbs}</div>
       </div>
       <div class="info">
-        <p class="insc">ŒUVRE UNIQUE 1/1 · SIGNÉE ET DATÉE 14/07/2025</p>
+        <p class="insc">ŒUVRE UNIQUE 1/1 · SÉRIE 0 · 14/07/2025</p>
         <h1{lang(t)}><span class="pre">Table en terrazzo</span>{esc(t["name"])}</h1>
         <p>{esc(t["desc"])}</p>
-        <p class="artline">Art fonctionnel : elle se pose comme une table et se regarde comme une sculpture. Exemplaire unique, première série.</p>
+        <p class="artline">Art fonctionnel : elle se pose comme une table et se regarde comme une sculpture. Exemplaire unique, Série 0 : L'Univers.</p>
         <dl class="spec">{spec_html}</dl>
         {part}
         <div class="ctas">
