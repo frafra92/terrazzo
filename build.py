@@ -103,7 +103,7 @@ FAQ = [
  ("Qu'est-ce que la Série 0 ?",
   "C'est la première série de tables, nommée L'Univers : les six premières œuvres, gravées et datées du 14 juillet 2025, qui marquent le début de ce travail."),
  ("Où est l'atelier ?",
-  f"À {S['city']} ({S['postal_code']}), en Île-de-France, sur rendez-vous. Le retrait et la livraison se discutent à la commande."),
+  f"À {S['city']} ({S['postal_code'][:2]}), en Île-de-France. Pas de visite sur place : on se joint par téléphone ou SMS, à toute heure, et le retrait ou la livraison se discutent à la commande."),
  ("Quel est le prix d'une table ?",
   "Le prix est communiqué sur demande, par téléphone ou SMS, car chaque pièce est unique."),
 ]
@@ -119,7 +119,7 @@ def build_home():
     body = (body.replace("{{CARDS}}", "".join(card(t) for t in TABLES))
                 .replace("{{OPTIONS}}", options).replace("{{COUNT}}", str(len(TABLES))))
     phone_row = f'<div><dt>Téléphone</dt><dd><a class="num" href="tel:{S["phone_tel"]}">{S["phone_display"]}</a></dd></div>'
-    body = body.replace('<dd>Orly (94), sur rendez-vous</dd></div>', '<dd>Orly (94), sur rendez-vous</dd></div>\n          ' + phone_row)
+    body = body.replace('<dd>Orly (94)</dd></div>', '<dd>Orly (94)</dd></div>\n          ' + phone_row)
     biz = {"@context": "https://schema.org", "@type": "LocalBusiness", "name": S["name"],
            "description": "Œuvres en terrazzo coulées main : tables d'art fonctionnel, exemplaires uniques signés et datés, et créations sur mesure.",
            "url": BASE, "telephone": S["phone_tel"], "image": BASE + "img/groupe.jpg",
@@ -186,7 +186,7 @@ def build_table(t):
           <a class="btn primary" href="tel:{S["phone_tel"]}">Appeler</a>
           <a class="btn" href="sms:{S["phone_tel"]}?&body={sms_body}">Envoyer un SMS</a>
         </div>
-        <p class="note">Ou au <span class="num">{S["phone_display"]}</span>. Atelier à {S["city"]} ({S["postal_code"][:2]}), sur rendez-vous.</p>
+        <p class="note">Ou au <span class="num">{S["phone_display"]}</span>. Atelier à {S["city"]} ({S["postal_code"][:2]}). Appels et SMS 24h/24.</p>
       </div>
     </article>
   </div>
