@@ -3,169 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Tables en terrazzo coulées main à Orly. Pièces uniques, signées et datées. Créations sur mesure.">
-<meta property="og:title" content="Terrazzo François">
-<meta property="og:description" content="Tables en terrazzo coulées main à Orly. Pièces uniques, signées et datées. Créations sur mesure.">
-<meta property="og:image" content="img/groupe.jpg">
-<title>Terrazzo François</title>
+<title>Table terrazzo faite main, pièce unique | Terrazzo François</title>
+<meta name="description" content="Tables en terrazzo coulées main à Orly, chacune en un seul exemplaire, gravée et signée. Six pièces disponibles et créations sur mesure.">
+<link rel="canonical" href="https://frafra92.github.io/terrazzo/">
+<meta property="og:site_name" content="Terrazzo François">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Table terrazzo faite main, pièce unique | Terrazzo François">
+<meta property="og:description" content="Tables en terrazzo coulées main à Orly, chacune en un seul exemplaire, gravée et signée. Six pièces disponibles et créations sur mesure.">
+<meta property="og:url" content="https://frafra92.github.io/terrazzo/">
+<meta property="og:image" content="https://frafra92.github.io/terrazzo/img/groupe.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&family=Noto+Sans+JP:wght@600&text=%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB&display=swap">
-<style>
-/* Layout: a terrazzo field (generated chips) behind a solid headline panel; then a gallery of six one-of-one pieces, each opening into a four-photo viewer; custom orders and contact below. */
-:root{
-  --bg:#E9E9E5; --bg2:#DEDEDA; --card:#F3F3F0; --fg:#15171A; --mute:#565B60; --line:#C5C6C1;
-  --accent:#E2A21B; --accent-ink:#15171A;
-  --c-green:#2DBE78; --c-yellow:#E2A21B; --c-black:#1B1C1E; --c-silver:#B7BDC4; --c-red:#C2492F; --c-ochre:#D8A57C;
-  --f-display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
-  --f-body:"DM Sans","Helvetica Neue",Arial,sans-serif;
-  --f-mono:"DM Mono",ui-monospace,Menlo,Consolas,monospace;
-  --gutter:clamp(16px,4vw,48px);
-}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#111314; --bg2:#191C1E; --card:#1A1D1F; --fg:#ECEDEA; --mute:#A3A8AB; --line:#2F3336; --c-black:#3A3D40; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#111314; --bg2:#191C1E; --card:#1A1D1F; --fg:#ECEDEA; --mute:#A3A8AB; --line:#2F3336; --c-black:#3A3D40; color-scheme:dark}
-
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.6;padding-inline:0}
-img{display:block;max-width:100%}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-.wrap{max-width:1240px;margin-inline:auto;padding-inline:var(--gutter)}
-h1,h2,h3{font-family:var(--f-display);font-weight:700;letter-spacing:-.02em;line-height:1.02;margin:0;text-wrap:balance}
-h2{font-size:clamp(2rem,5vw,3.6rem)}
-p{margin:0;text-wrap:pretty}
-.eyebrow{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
-.btn{display:inline-flex;align-items:center;gap:.5em;font:600 1rem/1 var(--f-body);padding:1em 1.4em;border-radius:999px;border:2px solid var(--fg);background:transparent;color:var(--fg);text-decoration:none;cursor:pointer}
-.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-.btn:hover{transform:translateY(-1px)}
-.btn.primary:hover{filter:brightness(1.06)}
-
-/* header */
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;flex-wrap:wrap;padding-block:6px}
-.brand{font-family:var(--f-display);font-weight:800;font-size:1.25rem;letter-spacing:-.02em;text-decoration:none;display:flex;align-items:center;gap:.5em}
-.brand i{display:inline-block;width:.8em;height:.8em;background:var(--accent);clip-path:polygon(10% 20%,70% 0,100% 55%,45% 100%,0 70%)}
-.top nav{display:flex;gap:clamp(12px,2.4vw,28px);font-size:.95rem;font-weight:500}
-.top nav a{text-decoration:none;padding:.4em 0;border-bottom:2px solid transparent}
-.top nav a:hover{border-color:var(--accent)}
-
-/* hero */
-.hero{position:relative;padding-block:clamp(40px,8vw,110px);overflow:hidden;background:var(--bg2)}
-#chips{position:absolute;inset:0;width:100%;height:100%}
-.hero .wrap{position:relative}
-.panel{background:var(--bg);max-width:680px;padding:clamp(22px,4vw,48px);display:flex;flex-direction:column;gap:22px;border-radius:4px 28px 4px 28px}
-.panel h1{font-size:clamp(2.4rem,6.4vw,4.8rem)}
-.panel .lead{font-size:1.15rem;color:var(--mute);max-width:46ch}
-.ctas{display:flex;flex-wrap:wrap;gap:12px}
-.facts{display:flex;flex-wrap:wrap;gap:8px 20px;font-family:var(--f-mono);font-size:.8rem;color:var(--mute)}
-.facts span::before{content:"";display:inline-block;width:.55em;height:.55em;background:var(--accent);margin-right:.5em;clip-path:polygon(10% 20%,70% 0,100% 55%,45% 100%,0 70%)}
-
-.group{margin:0}
-.group img{width:100%;max-height:70vh;object-fit:cover}
-.group figcaption{font-family:var(--f-mono);font-size:.78rem;color:var(--mute);padding-block:10px}
-
-/* collection */
-.section{padding-block:clamp(56px,9vw,120px)}
-.head{display:flex;flex-direction:column;gap:14px;margin-bottom:clamp(28px,5vw,56px);max-width:760px}
-.head p{color:var(--mute);font-size:1.1rem}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,32px)}
-@media (max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:560px){.grid{grid-template-columns:minmax(0,1fr)}}
-.card{background:none;border:0;padding:0;text-align:left;color:inherit;font:inherit;cursor:pointer;display:flex;flex-direction:column;gap:14px;min-width:0}
-.card .ph{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--bg2);border-radius:4px 24px 4px 24px}
-.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.card:hover .ph img{transform:scale(1.04)}
-.card .tag{position:absolute;left:12px;top:12px;background:var(--bg);color:var(--fg);font-family:var(--f-mono);font-size:.72rem;padding:.35em .7em;border-radius:999px;display:flex;align-items:center;gap:.5em}
-.dot{width:.6em;height:.6em;border-radius:50%;background:var(--c-green)}
-.card .row{display:flex;align-items:center;justify-content:space-between;gap:10px}
-.card h3{font-size:clamp(1.7rem,3vw,2.2rem)}
-.sw{display:flex;align-items:center;gap:8px;font-family:var(--f-mono);font-size:.74rem;color:var(--mute)}
-.sw i{width:1.1em;height:1.1em;border-radius:50%;border:2px solid var(--bg);box-shadow:0 0 0 1px var(--line)}
-.card p{color:var(--mute);font-size:.98rem}
-.card .more{font-weight:600;font-size:.95rem;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:2px;text-decoration-color:var(--accent)}
-
-/* signature */
-.sign{background:var(--c-black);color:#ECEDEA}
-.sign .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,72px);align-items:center}
-@media (max-width:820px){.sign .wrap{grid-template-columns:minmax(0,1fr)}}
-.sign img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 78%;border-radius:4px 28px 4px 28px}
-.sign h2{margin-bottom:18px}
-.sign p{color:#B9BDC0;max-width:48ch}
-.sign ul{list-style:none;padding:0;margin:28px 0 0;display:flex;flex-direction:column;gap:14px;font-size:1rem}
-.sign li{display:flex;gap:14px;align-items:baseline;border-top:1px solid #3A3D40;padding-top:14px}
-.sign li b{font-family:var(--f-mono);font-weight:500;font-size:.8rem;color:var(--accent);min-width:7.5em}
-.sign .eyebrow{color:#9DA2A6;display:block;margin-bottom:14px}
-
-/* custom */
-.custom{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(24px,5vw,72px)}
-@media (max-width:860px){.custom{grid-template-columns:minmax(0,1fr)}}
-.opts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:28px}
-@media (max-width:520px){.opts{grid-template-columns:minmax(0,1fr)}}
-.opt{padding:16px 18px;background:var(--card);border-left:6px solid var(--oc,var(--accent));border-radius:2px 14px 2px 14px}
-.opt b{display:block;font-family:var(--f-display);font-size:1.1rem;margin-bottom:2px}
-.opt span{color:var(--mute);font-size:.95rem}
-.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
-.steps li{display:grid;grid-template-columns:2.6rem minmax(0,1fr);gap:14px;padding-block:20px;border-top:1px solid var(--line)}
-.steps li:last-child{border-bottom:1px solid var(--line)}
-.steps .n{font-family:var(--f-mono);font-size:.9rem;color:var(--mute);padding-top:.3em}
-.steps h3{font-size:1.4rem;margin-bottom:6px}
-.steps p{color:var(--mute)}
-.steps-title{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:14px}
-
-.strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:clamp(40px,6vw,72px)}
-@media (max-width:760px){.strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.strip img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px 18px 4px 18px}
-.strip-cap{font-family:var(--f-mono);font-size:.78rem;color:var(--mute);margin-top:12px}
-
-/* contact */
-.contact{background:var(--bg2)}
-.cwrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,5vw,72px)}
-@media (max-width:860px){.cwrap{grid-template-columns:minmax(0,1fr)}}
-.cinfo{display:flex;flex-direction:column;gap:18px}
-.cinfo p{color:var(--mute)}
-.dl{display:grid;gap:10px;font-size:1rem;margin:0}
-.dl div{display:flex;gap:12px;border-top:1px solid var(--line);padding-top:10px}
-.dl dt{font-family:var(--f-mono);font-size:.76rem;text-transform:uppercase;letter-spacing:.1em;color:var(--mute);min-width:7em;padding-top:.25em}
-.dl dd{margin:0;user-select:all;min-width:0;overflow-wrap:anywhere}
-form{display:flex;flex-direction:column;gap:16px;background:var(--bg);padding:clamp(18px,3vw,32px);border-radius:4px 28px 4px 28px}
-.f{display:flex;flex-direction:column;gap:6px;min-width:0}
-.f label{font-weight:600;font-size:.92rem}
-.f input,.f select,.f textarea{font:inherit;color:var(--fg);background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:.8em .9em;width:100%;min-width:0}
-.f textarea{min-height:120px;resize:vertical}
-.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-@media (max-width:520px){.two{grid-template-columns:minmax(0,1fr)}}
-.out{display:flex;flex-direction:column;gap:12px;border:2px dashed var(--accent);border-radius:14px;padding:16px}
-.out pre{margin:0;white-space:pre-wrap;font-family:var(--f-mono);font-size:.84rem;user-select:all;overflow-wrap:anywhere}
-.out .acts{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.out small{color:var(--mute)}
-footer{padding-block:32px;border-top:1px solid var(--line);font-family:var(--f-mono);font-size:.78rem;color:var(--mute)}
-footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
-
-/* viewer */
-dialog{border:0;padding:0;background:var(--bg);color:var(--fg);width:min(1080px,calc(100% - 24px));max-height:calc(100% - 24px);border-radius:4px 28px 4px 28px;overflow:auto}
-dialog::backdrop{background:rgba(10,11,12,.72)}
-.v{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr)}
-@media (max-width:820px){.v{grid-template-columns:minmax(0,1fr)}}
-.v .gal{background:var(--bg2);padding:clamp(12px,2vw,20px);display:flex;flex-direction:column;gap:12px;min-width:0}
-.v .big{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px 20px 4px 20px;max-height:76vh;margin-inline:auto}
-.thumbs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
-.thumbs button{padding:0;border:2px solid transparent;background:none;cursor:pointer;border-radius:8px;overflow:hidden;aspect-ratio:1}
-.thumbs button[aria-current="true"]{border-color:var(--accent)}
-.thumbs img{width:100%;height:100%;object-fit:cover}
-.v .info{padding:clamp(20px,3vw,40px);display:flex;flex-direction:column;gap:18px;min-width:0}
-.v h2{font-size:clamp(2.4rem,5vw,3.6rem)}
-.v .insc{font-family:var(--f-mono);font-size:.82rem;color:var(--mute)}
-.v .info p{color:var(--mute)}
-.spec{display:grid;gap:8px;margin:0;font-size:.95rem}
-.spec div{display:flex;gap:12px;border-top:1px solid var(--line);padding-top:8px}
-.spec dt{font-family:var(--f-mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.1em;color:var(--mute);min-width:7.5em;padding-top:.25em}
-.spec dd{margin:0;min-width:0}
-.close{position:sticky;top:0;float:right;margin:10px 10px -50px 0;z-index:2;width:44px;height:44px;border-radius:50%;border:0;background:var(--bg);color:var(--fg);font-size:1.4rem;cursor:pointer;box-shadow:0 0 0 1px var(--line)}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-</style>
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Terrazzo François", "description": "Tables en terrazzo coulées main, pièces uniques signées et datées, et créations sur mesure.", "url": "https://frafra92.github.io/terrazzo/", "telephone": "+33783925894", "image": "https://frafra92.github.io/terrazzo/img/groupe.jpg", "address": {"@type": "PostalAddress", "addressLocality": "Orly", "postalCode": "94310", "addressCountry": "FR"}, "areaServed": {"@type": "AdministrativeArea", "name": "Île-de-France"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quelles sont les dimensions des tables ?", "acceptedAnswer": {"@type": "Answer", "text": "Chaque table mesure 71 cm de haut. Le plateau rond en terrazzo fait 49,5 cm de diamètre et 3,5 cm d'épaisseur."}}, {"@type": "Question", "name": "Chaque table est-elle vraiment unique ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. Les plateaux sont coulés à la main, avec des éclats de marbre placés pour chaque pièce. Aucun plateau n'est reproduit. Le nom, la signature et la date sont gravés au dos."}}, {"@type": "Question", "name": "Peut-on commander une table en terrazzo sur mesure ?", "acceptedAnswer": {"@type": "Answer", "text": "Oui. La couleur du plateau, les éclats de marbre, le pied, la gravure et la taille se choisissent avec vous. Appelez ou envoyez un SMS pour décrire votre projet."}}, {"@type": "Question", "name": "Où est l'atelier ?", "acceptedAnswer": {"@type": "Answer", "text": "À Orly (94310), en Île-de-France, sur rendez-vous. Le retrait et la livraison se discutent à la commande."}}, {"@type": "Question", "name": "Quel est le prix d'une table ?", "acceptedAnswer": {"@type": "Answer", "text": "Le prix est communiqué sur demande, par téléphone ou SMS, car chaque pièce est unique."}}]}</script>
+</head>
+<body>
 </head>
 <body>
 
@@ -190,7 +46,7 @@ dialog::backdrop{background:rgba(10,11,12,.72)}
         <h1>Terrazzo coulé main. Un seul exemplaire de chaque table.</h1>
         <p class="lead">Plateaux ronds en éclats de marbre sur d'anciens pieds de bistrot repeints. Chaque pièce porte un nom, ma signature et sa date, gravés au dos.</p>
         <div class="ctas">
-          <a class="btn primary" href="#pieces">Voir les <span id="count">6</span> pièces</a>
+          <a class="btn primary" href="#pieces">Voir les 6 pièces</a>
           <a class="btn" href="#sur-mesure">Demander une création</a>
         </div>
         <div class="facts"><span>Pièces uniques</span><span>Signées et datées</span><span>Créations sur mesure</span></div>
@@ -207,10 +63,58 @@ dialog::backdrop{background:rgba(10,11,12,.72)}
     <div class="wrap">
       <div class="head">
         <p class="eyebrow">La collection</p>
-        <h2>Six pièces, six caractères</h2>
-        <p>Aucune n'a de jumelle. Les éclats de marbre tombent où ils tombent, le pied a sa couleur, le nom est gravé à la main. Touchez une table pour voir toutes ses photos.</p>
+        <h2>Six tables en terrazzo, six caractères</h2>
+        <p>Aucune n'a de jumelle. Les éclats de marbre tombent où ils tombent, le pied a sa couleur, le nom est gravé à la main. Ouvrez une table pour voir toutes ses photos et ses détails.</p>
       </div>
-      <div class="grid" id="grid"></div>
+      <div class="grid">
+  <a class="card" href="tables/soleil/" aria-label="Voir la table en terrazzo Soleil">
+    <div class="ph"><img src="img/soleil-1.jpg" alt="Table en terrazzo Soleil, plateau ocre et pied jaune, vue de profil" loading="lazy" width="975" height="1300">
+      <span class="tag"><i class="dot"></i>Disponible</span></div>
+    <div class="row"><h3>Soleil</h3>
+      <span class="sw"><i style="background:#E2A21B"></i>Pied jaune</span></div>
+    <p>Plateau ocre orangé, gros éclats de marbre blanc, noir et gris veiné.</p>
+    <span class="more">Voir la pièce</span>
+  </a>
+  <a class="card" href="tables/mars/" aria-label="Voir la table en terrazzo Mars">
+    <div class="ph"><img src="img/mars-1.jpg" alt="Table en terrazzo Mars, plateau sable et rouge sur pied noir, vue de profil" loading="lazy" width="975" height="1300">
+      <span class="tag"><i class="dot"></i>Disponible</span></div>
+    <div class="row"><h3>Mars</h3>
+      <span class="sw"><i style="background:#1B1C1E"></i>Pied noir</span></div>
+    <p>Plateau sable parsemé de rouge, nuage d&#x27;éclats blancs au centre.</p>
+    <span class="more">Voir la pièce</span>
+  </a>
+  <a class="card" href="tables/lune/" aria-label="Voir la table en terrazzo Lune">
+    <div class="ph"><img src="img/lune-1.jpg" alt="Table en terrazzo Lune, plateau gris pâle sur pied argenté, vue de profil" loading="lazy" width="975" height="1300">
+      <span class="tag"><i class="dot"></i>Disponible</span></div>
+    <div class="row"><h3>Lune</h3>
+      <span class="sw"><i style="background:#B7BDC4"></i>Pied argenté</span></div>
+    <p>Plateau gris pâle, éclats bleu nuit, taches blanches comme des cratères.</p>
+    <span class="more">Voir la pièce</span>
+  </a>
+  <a class="card" href="tables/terre/" aria-label="Voir la table en terrazzo Terre">
+    <div class="ph"><img src="img/terre-1.jpg" alt="Table en terrazzo Terre, plateau clair sur pied vert vif, vue de profil" loading="lazy" width="975" height="1300">
+      <span class="tag"><i class="dot"></i>Disponible</span></div>
+    <div class="row"><h3>Terre</h3>
+      <span class="sw"><i style="background:#2DBE78"></i>Pied vert vif</span></div>
+    <p>Plateau clair moucheté de rouge et de vert, sur pied vert vif.</p>
+    <span class="more">Voir la pièce</span>
+  </a>
+  <a class="card" href="tables/earth/" aria-label="Voir la table en terrazzo Earth">
+    <div class="ph"><img src="img/earth-1.jpg" alt="Table en terrazzo Earth, plateau clair sur pied vert vif, vue de profil" loading="lazy" width="975" height="1300">
+      <span class="tag"><i class="dot"></i>Disponible</span></div>
+    <div class="row"><h3>Earth</h3>
+      <span class="sw"><i style="background:#2DBE78"></i>Pied vert vif</span></div>
+    <p>Sœur de Terre : même pied vert, un autre dessin d&#x27;éclats.</p>
+    <span class="more">Voir la pièce</span>
+  </a>
+  <a class="card" href="tables/teburu/" aria-label="Voir la table en terrazzo テーブル">
+    <div class="ph"><img src="img/table-1.jpg" alt="Table en terrazzo テーブル (tēburu), plateau blanc sur pied argenté, vue de profil" loading="lazy" width="975" height="1300">
+      <span class="tag"><i class="dot"></i>Disponible</span></div>
+    <div class="row"><h3 lang="ja">テーブル</h3>
+      <span class="sw"><i style="background:#B7BDC4"></i>Pied argenté</span></div>
+    <p>« Table » en japonais. Plateau blanc, éclats rouges rares, pied argenté.</p>
+    <span class="more">Voir la pièce</span>
+  </a></div>
     </div>
   </section>
 
@@ -236,7 +140,7 @@ dialog::backdrop{background:rgba(10,11,12,.72)}
         <div>
           <div class="head" style="margin-bottom:0">
             <p class="eyebrow">Sur mesure</p>
-            <h2>Une table qui n'existe pas encore</h2>
+            <h2>Une table en terrazzo sur mesure</h2>
             <p>Vous avez une couleur, un lieu, une histoire à mettre dans un plateau ? Je crée la pièce avec vous, et elle reste unique elle aussi.</p>
           </div>
           <div class="opts">
@@ -267,6 +171,8 @@ dialog::backdrop{background:rgba(10,11,12,.72)}
     </div>
   </section>
 
+  <section class="section" id="questions"><div class="wrap"><div class="head"><p class="eyebrow">Questions</p><h2>Ce qu'on me demande souvent</h2></div><div class="faq"><details><summary>Quelles sont les dimensions des tables ?</summary><p>Chaque table mesure 71 cm de haut. Le plateau rond en terrazzo fait 49,5 cm de diamètre et 3,5 cm d&#x27;épaisseur.</p></details><details><summary>Chaque table est-elle vraiment unique ?</summary><p>Oui. Les plateaux sont coulés à la main, avec des éclats de marbre placés pour chaque pièce. Aucun plateau n&#x27;est reproduit. Le nom, la signature et la date sont gravés au dos.</p></details><details><summary>Peut-on commander une table en terrazzo sur mesure ?</summary><p>Oui. La couleur du plateau, les éclats de marbre, le pied, la gravure et la taille se choisissent avec vous. Appelez ou envoyez un SMS pour décrire votre projet.</p></details><details><summary>Où est l&#x27;atelier ?</summary><p>À Orly (94310), en Île-de-France, sur rendez-vous. Le retrait et la livraison se discutent à la commande.</p></details><details><summary>Quel est le prix d&#x27;une table ?</summary><p>Le prix est communiqué sur demande, par téléphone ou SMS, car chaque pièce est unique.</p></details></div></div></section>
+
   <section class="section contact" id="contact">
     <div class="wrap cwrap">
       <div class="cinfo">
@@ -275,6 +181,7 @@ dialog::backdrop{background:rgba(10,11,12,.72)}
         <p>Appelez-moi ou écrivez quelques lignes. Je réponds avec disponibilité, prix et possibilités de retrait ou de livraison.</p>
         <dl class="dl" id="dl">
           <div><dt>Atelier</dt><dd>Orly (94), sur rendez-vous</dd></div>
+          <div><dt>Téléphone</dt><dd><a class="num" href="tel:+33783925894">07 83 92 58 94</a></dd></div>
         </dl>
       </div>
       <form id="form" novalidate>
@@ -283,7 +190,7 @@ dialog::backdrop{background:rgba(10,11,12,.72)}
           <div class="f"><label for="coord">Téléphone ou e-mail</label><input id="coord" autocomplete="tel"></div>
         </div>
         <div class="f"><label for="piece">Ce qui vous intéresse</label>
-          <select id="piece"></select></div>
+          <select id="piece"><option value="">Choisir…</option><option value="Soleil">Soleil (pied jaune)</option><option value="Mars">Mars (pied noir)</option><option value="Lune">Lune (pied argenté)</option><option value="Terre">Terre (pied vert vif)</option><option value="Earth">Earth (pied vert vif)</option><option value="テーブル">テーブル (pied argenté)</option><option value="une création sur mesure">Une création sur mesure</option></select></div>
         <div class="f"><label for="msg">Votre message</label>
           <textarea id="msg" placeholder="Pour quel lieu, quelles couleurs, quelle taille, pour quand ?"></textarea></div>
         <button class="btn primary" type="submit" style="align-self:flex-start">Préparer mon message</button>
@@ -295,155 +202,6 @@ dialog::backdrop{background:rgba(10,11,12,.72)}
 
 <footer><div class="wrap"><span>Terrazzo François · Orly (94)</span><span>Pièces uniques, coulées et signées à la main</span></div></footer>
 
-<dialog id="dlg" aria-labelledby="v-name">
-  <button class="close" id="close" aria-label="Fermer">×</button>
-  <div class="v">
-    <div class="gal"><img class="big" id="big" alt="" width="975" height="1300"><div class="thumbs" id="thumbs"></div></div>
-    <div class="info">
-      <p class="insc" id="v-insc"></p>
-      <h2 id="v-name"></h2>
-      <p id="v-desc"></p>
-      <dl class="spec" id="v-spec"></dl>
-      <div class="ctas"><button class="btn primary" id="v-ask">Je veux cette pièce</button></div>
-    </div>
-  </div>
-</dialog>
-
-<script>
-/* ===== À renseigner pour la mise en ligne ===== */
-const CONTACT = { phone:"07 83 92 58 94", email:"", instagram:"" };
-
-const PIECES = [
-  {id:"soleil",name:"Soleil",tag:"Pied jaune",pied:"#E2A21B",piedName:"Jaune",
-   short:"Plateau ocre orangé, gros éclats de marbre blanc, noir et gris veiné.",
-   desc:"Le plus généreux de la série. Un plateau ocre orangé où flottent de grands éclats de marbre blanc, un noir profond, un gris veiné, et de petites pastilles rondes. Le pied jaune fait le reste.",
-   plateau:"Ocre orangé, grands éclats de marbre blanc, noir et gris",alt:["De profil, en situation","Plateau vu du dessus","Dessous et pied","Gravure : Soleil, signature, date"]},
-  {id:"mars",name:"Mars",tag:"Pied noir",pied:"#1B1C1E",piedName:"Noir",
-   short:"Plateau sable parsemé de rouge, nuage d'éclats blancs au centre.",
-   desc:"Un plateau sable chaud traversé d'éclats rouges, avec un nuage de marbre blanc au centre. Sur son pied noir de bistrot, c'est la plus classique des six, et la plus rouge.",
-   plateau:"Sable, éclats rouges, nuage de marbre blanc",alt:["De profil, en situation","Plateau vu du dessus","Dessous et pied","Gravure : Mars, signature, date"]},
-  {id:"lune",name:"Lune",tag:"Pied argenté",pied:"#B7BDC4",piedName:"Argenté",
-   short:"Plateau gris pâle, éclats bleu nuit, taches blanches comme des cratères.",
-   desc:"Un plateau gris pâle semé d'éclats bleu nuit et noirs, avec de grandes taches de marbre blanc qui rappellent des cratères. Le pied argenté et ouvragé lui donne un air d'objet venu d'ailleurs.",
-   plateau:"Gris pâle, éclats bleu nuit et noirs, taches de marbre blanc",alt:["De profil, en situation","Plateau vu du dessus","Dessous et pied","Gravure : Lune, signature, date"]},
-  {id:"terre",name:"Terre",tag:"Pied vert",pied:"#2DBE78",piedName:"Vert vif",
-   short:"Plateau clair moucheté de rouge et de vert, sur pied vert vif.",
-   desc:"Un plateau clair fin comme du sel, moucheté de petits éclats rouges et de touches vertes. Le pied vert vif reprend la couleur de la mousse. Elle a une sœur, Earth, jamais tout à fait pareille.",
-   plateau:"Blanc cassé, fins éclats rouges et verts",alt:["De profil, en situation","Plateau vu du dessus","Dessous et pied","Gravure : Terre, signature, date"]},
-  {id:"earth",name:"Earth",tag:"Pied vert",pied:"#2DBE78",piedName:"Vert vif",
-   short:"Sœur de Terre : même pied vert, un autre dessin d'éclats.",
-   desc:"Même famille que Terre, même pied vert, mais les éclats sont tombés autrement. Plateau clair, fins éclats rouges et verts, quelques taches plus larges. La preuve que deux plateaux ne se ressemblent jamais.",
-   plateau:"Blanc cassé, éclats rouges et verts, taches plus larges",alt:["De profil, en situation","Plateau vu du dessus","Dessous et pied","Gravure : Earth, signature, date"]},
-  {id:"table",name:"テーブル",latin:"Tēburu",tag:"Pied argenté",pied:"#B7BDC4",piedName:"Argenté",
-   short:"« Table » en japonais. Plateau blanc, éclats rouges rares, pied argenté.",
-   desc:"Son nom est écrit en japonais et se lit « tēburu » : la table. C'est la plus calme, un plateau blanc presque uni, ponctué de rares éclats rouges, sur un pied argenté à cannelures.",
-   plateau:"Blanc, rares éclats rouges et verts",alt:["De profil, en situation","Plateau vu du dessus","Dessous et pied","Gravure : テーブル, signature, date"]}
-];
-const $ = s => document.querySelector(s);
-const imgs = p => [1,2,3,4].map(i => `img/${p.id}-${i}.jpg`);
-$("#count").textContent = PIECES.length;
-
-/* grille */
-$("#grid").innerHTML = PIECES.map(p => `
-  <button class="card" data-id="${p.id}" aria-label="Voir ${p.name}">
-    <div class="ph"><img src="${imgs(p)[0]}" alt="Table ${p.name}, vue de profil" loading="lazy" width="975" height="1300">
-      <span class="tag"><i class="dot"></i>Disponible</span></div>
-    <div class="row"><h3 lang="${p.id==='table'?'ja':'fr'}">${p.name}</h3>
-      <span class="sw"><i style="background:${p.pied}"></i>${p.tag}</span></div>
-    <p>${p.short}</p>
-    <span class="more">Voir la pièce</span>
-  </button>`).join("");
-
-/* select contact */
-$("#piece").innerHTML = `<option value="">Choisir…</option>` +
-  PIECES.map(p => `<option value="${p.name}">${p.name} (${p.tag.toLowerCase()})</option>`).join("") +
-  `<option value="une création sur mesure">Une création sur mesure</option>`;
-
-/* viewer */
-const dlg = $("#dlg"); let cur = null;
-function show(i){
-  const p = cur, src = imgs(p);
-  $("#big").src = src[i]; $("#big").alt = p.alt[i] + " : " + p.name;
-  [...$("#thumbs").children].forEach((b,k)=>b.setAttribute("aria-current", k===i));
-}
-function open(id){
-  cur = PIECES.find(p=>p.id===id); if(!cur) return;
-  const p = cur;
-  $("#v-insc").textContent = "PIÈCE UNIQUE 1/1 · GRAVÉE 14/07/2025";
-  $("#v-name").textContent = p.name; $("#v-name").lang = p.id==="table"?"ja":"fr";
-  $("#v-desc").textContent = p.desc;
-  $("#v-spec").innerHTML = [
-    ["Plateau","Terrazzo rond coulé main. "+p.plateau],
-    ["Dimensions","Ø 49,5 cm · épaisseur 3,5 cm · hauteur totale 71 cm"],
-    ["Pied","Pied de bistrot ancien repeint en "+p.piedName.toLowerCase()],
-    ["Fixation","Vissé sur une cale en bois de parquet"],
-    ["Gravure","Nom"+(p.latin?" ("+p.latin+")":"")+", signature et date au dos"],
-    ["Prix",p.price?p.price+" €":"Sur demande"],
-    ["Statut","Disponible"]
-  ].map(([a,b])=>`<div><dt>${a}</dt><dd>${b}</dd></div>`).join("");
-  $("#thumbs").innerHTML = imgs(p).map((s,k)=>`<button data-k="${k}" aria-label="Photo ${k+1}"><img src="${s}" alt=""></button>`).join("");
-  show(0);
-  if(!dlg.open) dlg.showModal();
-  try{history.replaceState(null,"","#"+id)}catch(e){}
-}
-$("#grid").addEventListener("click",e=>{const c=e.target.closest(".card"); if(c) open(c.dataset.id)});
-$("#thumbs").addEventListener("click",e=>{const b=e.target.closest("button"); if(b) show(+b.dataset.k)});
-$("#close").addEventListener("click",()=>dlg.close());
-dlg.addEventListener("click",e=>{ if(e.target===dlg) dlg.close() });
-dlg.addEventListener("close",()=>{try{history.replaceState(null,"","#pieces")}catch(e){}});
-$("#v-ask").addEventListener("click",()=>{
-  $("#piece").value = cur.name; dlg.close();
-  $("#msg").value = $("#msg").value || `Bonjour, la table ${cur.name} est-elle toujours disponible ?`;
-  $("#contact").scrollIntoView();
-});
-const h = location.hash.slice(1); if(PIECES.some(p=>p.id===h)) open(h);
-
-/* coordonnées affichées seulement si renseignées */
-const rows = [];
-if(CONTACT.phone) rows.push(["Téléphone",CONTACT.phone]);
-if(CONTACT.email) rows.push(["E-mail",CONTACT.email]);
-if(CONTACT.instagram) rows.push(["Instagram",CONTACT.instagram]);
-$("#dl").insertAdjacentHTML("beforeend", rows.map(([a,b])=>`<div><dt>${a}</dt><dd>${b}</dd></div>`).join(""));
-
-/* formulaire : prépare le message, à copier ou ouvrir */
-$("#form").addEventListener("submit",e=>{
-  e.preventDefault();
-  const nom=$("#nom").value.trim(), coord=$("#coord").value.trim(), piece=$("#piece").value, msg=$("#msg").value.trim();
-  const txt = `Bonjour François,\nJe m'intéresse à ${piece||"vos tables en terrazzo"}.\n${msg?msg+"\n":""}\n${nom||""}${coord?" · "+coord:""}`.trim();
-  const out=$("#out"); out.hidden=false;
-  const links=[];
-  if(CONTACT.email) links.push(`<a class="btn" href="mailto:${CONTACT.email}?subject=${encodeURIComponent("Terrazzo François : "+(piece||"demande"))}&body=${encodeURIComponent(txt)}">Ouvrir dans mon e-mail</a>`);
-  if(CONTACT.phone) links.push(`<a class="btn" href="sms:${CONTACT.phone.replace(/\s/g,"")}?&body=${encodeURIComponent(txt)}">Ouvrir dans mes SMS</a>`);
-  out.innerHTML = `<strong>Votre message est prêt</strong><pre id="pre"></pre>
-    <div class="acts"><button type="button" class="btn primary" id="copy">Copier le message</button>${links.join("")}<small id="cs"></small></div>
-    <small>Rien n'est envoyé depuis cette page. Copiez le message et envoyez-le par SMS ou e-mail${rows.length?" aux coordonnées ci-contre":""}.</small>`;
-  $("#pre").textContent = txt;
-  $("#copy").onclick = async ()=>{
-    try{ await navigator.clipboard.writeText(txt); $("#cs").textContent="Copié"; }
-    catch(_){ const r=document.createRange(); r.selectNodeContents($("#pre")); const s=getSelection(); s.removeAllRanges(); s.addRange(r); $("#cs").textContent="Texte sélectionné, copiez-le"; }
-  };
-});
-
-/* champ d'éclats de terrazzo (hero) */
-(function(){
-  const cv=$("#chips"), ctx=cv.getContext("2d");
-  const pal=["#2DBE78","#E2A21B","#1B1C1E","#B7BDC4","#C2492F","#D8A57C","#F1F1EE"];
-  let seed=14072025; const rnd=()=>{seed=(seed*1664525+1013904223)%4294967296;return seed/4294967296};
-  function draw(){
-    const r=cv.parentElement.getBoundingClientRect(), d=Math.min(devicePixelRatio||1,2);
-    cv.width=r.width*d; cv.height=r.height*d; ctx.setTransform(d,0,0,d,0,0);
-    seed=14072025; const n=Math.round(r.width*r.height/2600);
-    for(let i=0;i<n;i++){
-      const x=rnd()*r.width,y=rnd()*r.height,s=5+Math.pow(rnd(),2.4)*70,k=5+Math.floor(rnd()*3),rot=rnd()*6.28;
-      ctx.fillStyle=pal[Math.floor(Math.pow(rnd(),1.3)*pal.length)];
-      ctx.beginPath();
-      for(let j=0;j<k;j++){const a=rot+j/k*6.283,rr=s*(.55+rnd()*.5);ctx.lineTo(x+Math.cos(a)*rr,y+Math.sin(a)*rr*.8)}
-      ctx.closePath();ctx.fill();
-    }
-  }
-  draw(); let t; addEventListener("resize",()=>{clearTimeout(t);t=setTimeout(draw,150)});
-})();
-</script>
-
+<script src="home.js"></script>
 </body>
 </html>
