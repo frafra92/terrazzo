@@ -168,3 +168,13 @@ a.card{text-decoration:none}
 .note{font-size:.92rem;color:var(--mute)}
 .part{margin:0;padding-left:1.1em;color:var(--mute)}
 .thumbs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+
+/* art fonctionnel */
+.art{background:var(--bg2)}
+.artgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,3vw,40px)}
+@media (max-width:760px){.artgrid{grid-template-columns:minmax(0,1fr)}}
+.artgrid>div{border-top:3px solid var(--accent);padding-top:16px}
+.artgrid h3{font-size:1.5rem;margin-bottom:8px}
+.artgrid p{color:var(--mute)}
+.artnote{margin-top:clamp(24px,4vw,44px);max-width:62ch;font-size:1.1rem}
+.artline{border-left:4px solid var(--accent);padding-left:14px;color:var(--fg)!important}

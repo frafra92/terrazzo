@@ -75,7 +75,7 @@ def card(t):
     return f'''
   <a class="card" href="tables/{t["id"]}/" aria-label="Voir la table en terrazzo {esc(t["name"])}">
     <div class="ph"><img src="img/{t["img"]}-1.jpg" alt="{esc(t["alts"][0])}" loading="lazy" width="975" height="1300">
-      <span class="tag"><i class="dot"></i>Disponible</span></div>
+      <span class="tag"><i class="dot"></i>1/1 · Disponible</span></div>
     <div class="row"><h3{lang(t)}>{esc(t["name"])}</h3>
       <span class="sw"><i style="background:{t["pied_hex"]}"></i>Pied {t["pied"]}</span></div>
     <p>{esc(t["short"])}</p>
@@ -86,8 +86,8 @@ def price_txt(t):
     return f'{t["price"]} €' if t.get("price") else "Sur demande"
 
 def meta_desc(t):
-    return (f"Table en terrazzo {t['name']}, pièce unique coulée main à {S['city']}. Plateau Ø {fr(DIM['diametre_cm'])} cm, "
-            f"pied {t['pied']}, {DIM['hauteur_cm']} cm de haut. Nom, signature et date gravés.")
+    return (f"Table en terrazzo {t['name']}, œuvre unique coulée main à {S['city']}. Plateau Ø {fr(DIM['diametre_cm'])} cm, "
+            f"pied {t['pied']}, {DIM['hauteur_cm']} cm de haut. Gravée, signée et datée.")
 
 FAQ = [
  ("Quelles sont les dimensions des tables ?",
@@ -96,6 +96,8 @@ FAQ = [
   "Oui. Les plateaux sont coulés à la main, avec des éclats de marbre placés pour chaque pièce. Aucun plateau n'est reproduit. Le nom, la signature et la date sont gravés au dos."),
  ("Peut-on commander une table en terrazzo sur mesure ?",
   "Oui. La couleur du plateau, les éclats de marbre, le pied, la gravure et la taille se choisissent avec vous. Appelez ou envoyez un SMS pour décrire votre projet."),
+ ("Est-ce un investissement ?",
+  "Chaque table est une œuvre signée, datée et en un seul exemplaire, ce qui la distingue d'un meuble de série. Je ne promets aucune plus-value : une œuvre s'achète d'abord pour la vivre chez soi."),
  ("Où est l'atelier ?",
   f"À {S['city']} ({S['postal_code']}), en Île-de-France, sur rendez-vous. Le retrait et la livraison se discutent à la commande."),
  ("Quel est le prix d'une table ?",
@@ -115,15 +117,15 @@ def build_home():
     phone_row = f'<div><dt>Téléphone</dt><dd><a class="num" href="tel:{S["phone_tel"]}">{S["phone_display"]}</a></dd></div>'
     body = body.replace('<dd>Orly (94), sur rendez-vous</dd></div>', '<dd>Orly (94), sur rendez-vous</dd></div>\n          ' + phone_row)
     biz = {"@context": "https://schema.org", "@type": "LocalBusiness", "name": S["name"],
-           "description": "Tables en terrazzo coulées main, pièces uniques signées et datées, et créations sur mesure.",
+           "description": "Œuvres en terrazzo coulées main : tables d'art fonctionnel, exemplaires uniques signés et datés, et créations sur mesure.",
            "url": BASE, "telephone": S["phone_tel"], "image": BASE + "img/groupe.jpg",
            "address": {"@type": "PostalAddress", "addressLocality": S["city"], "postalCode": S["postal_code"], "addressCountry": "FR"},
            "areaServed": {"@type": "AdministrativeArea", "name": "Île-de-France"}}
     if S.get("same_as"): biz["sameAs"] = S["same_as"]
     faq_ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]}
-    h = head("Table terrazzo faite main, pièce unique | Terrazzo François",
-             "Tables en terrazzo coulées main à Orly, chacune en un seul exemplaire, gravée et signée. Six pièces disponibles et créations sur mesure.",
+    h = head("Table terrazzo faite main, œuvre unique signée | Terrazzo François",
+             "Œuvres en terrazzo coulées main à Orly : des tables d'art fonctionnel, chacune en un seul exemplaire, gravée, signée et datée. Création sur mesure.",
              BASE, "", ld(biz) + "\n" + ld(faq_ld))
     html_out = h + body.strip() + '\n\n<script src="home.js"></script>\n</body>\n</html>\n'
     (ROOT / "index.html").write_text(html_out, encoding="utf-8")
@@ -132,7 +134,7 @@ def build_table(t):
     url = f"{BASE}tables/{t['id']}/"
     pfx = "../../"
     imgs = [f"{pfx}img/{t['img']}-{i}.jpg" for i in range(1, 5)]
-    title = f"Table terrazzo {t['name']}, pièce unique pied {t['pied']} | {S['name']}"
+    title = f"Table terrazzo {t['name']}, œuvre unique pied {t['pied']} | {S['name']}"
     desc = meta_desc(t)
     prod = {"@context": "https://schema.org", "@type": "Product", "name": f"Table en terrazzo {t['name']}",
             "description": t["desc"], "image": [f"{BASE}img/{t['img']}-{i}.jpg" for i in range(1, 5)],
@@ -152,7 +154,7 @@ def build_table(t):
             ("Dimensions", f"Ø {fr(DIM['diametre_cm'])} cm · épaisseur {fr(DIM['epaisseur_cm'])} cm · hauteur totale {DIM['hauteur_cm']} cm"),
             ("Pied", pied_spec(t)), ("Fixation", "Vissé sur une cale en bois de parquet"),
             ("Gravure", "Nom" + (f" ({t['latin']})" if t.get("latin") else "") + ", signature et date au dos"),
-            ("Prix", price_txt(t)), ("Statut", "Disponible")]
+            ("Prix", price_txt(t)), ("Édition", "Exemplaire unique, première série"), ("Statut", "Disponible")]
     spec_html = "".join(f"<div><dt>{a}</dt><dd>{esc(b)}</dd></div>" for a, b in spec)
     part = ""
     if t.get("particularites"):
@@ -170,9 +172,10 @@ def build_table(t):
         <div class="thumbs" id="thumbs">{thumbs}</div>
       </div>
       <div class="info">
-        <p class="insc">PIÈCE UNIQUE 1/1 · GRAVÉE 14/07/2025</p>
+        <p class="insc">ŒUVRE UNIQUE 1/1 · SIGNÉE ET DATÉE 14/07/2025</p>
         <h1{lang(t)}><span class="pre">Table en terrazzo</span>{esc(t["name"])}</h1>
         <p>{esc(t["desc"])}</p>
+        <p class="artline">Art fonctionnel : elle se pose comme une table et se regarde comme une sculpture. Exemplaire unique, première série.</p>
         <dl class="spec">{spec_html}</dl>
         {part}
         <div class="ctas">
